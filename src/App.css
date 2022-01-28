@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+body * {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+   background: linear-gradient(0deg, rgb(233, 97, 97), rgba(235, 41, 41, 0.4));
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    font-size: 70px;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+#current_word span {
+   font-size: 40px;
+   border-bottom: 3px solid white;
+   margin: 0 5px;
+   padding: 5px 20px;
+   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#current_word span.notfinded {
+   color: rgba(255, 255, 255, 0.3)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#current_word span.lost {
+   color: red;
+}
+
+#life {
+    margin-top: 50px;
+}
+
+
+#keybord {
+   max-width: 600px;
+   display: inline-block;
+   margin-top: 50px;
+}
+
+
+#keybord button {
+    background: black;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border: 0;
+    margin: 5px;
+    font-size: 20px;
+    display: inline-block;
+    width: 30px;
+}
+
+#keybord button.used {
+    opacity: 0.5;
+}
+
+#new_game {
+    background: transparent;
+    color: white;
+    font-size: 30px;
+    border: 5px double white;
+    margin-top: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.win_msg, .lost_msg {
+    font-size: 40px;
+    color: white;
+    padding: 20px 0;
+}
+
+.lost_msg {
+    color: red
 }
